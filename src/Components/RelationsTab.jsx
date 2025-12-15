@@ -5,7 +5,7 @@ import ImagesService from "../Services/ImagesService";
 
 const RelationsTab = ({ champion }) => {
     const navigate = useNavigate();
-    const relations = ChampionRelations.getChampionRelations(champion.id);
+    const relations = ChampionRelations.getChampionRelations(champion.id);//kk
 
     if (!relations) {
         return <>
