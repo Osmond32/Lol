@@ -17,7 +17,7 @@ Une application web interactive pour explorer l'univers de **League of Legends**
 - Naviguez facilement entre les champions liés
 
 ### **Explorer les Régions**
-- Découvrez les 10 principales régions de Runeterra (Demacia, Noxus, Ionia, etc.)
+- Découvrez les 10 principales régions de Runeterra (Demacia, Noxus, Ionia, etc...)
 - Trouvez quels champions proviennent de chaque région
 - Plongez dans l'histoire de chaque lieu
 
