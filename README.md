@@ -1,6 +1,6 @@
 # ⚔️ League of Legends Champions Explorer
 
-Une application web interactive pour explorer l'univers de **League of Legends** : découvrez les champions, leurs compétences, les régions de Runeterra et testez vos connaissances sur le lore du jeu !!
+Une application web interactive pour explorer l'univers de **League of Legends** : découvrez les champions, leurs compétences, les régions de Runeterra et testez vos connaissances sur le lore du jeu !!!
 
 ---
 
