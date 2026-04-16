@@ -16,11 +16,13 @@ const NavBar = () => {
         }
     }
 
-    return<>
+    return <>
 
-    <Navbar expand="lg" style={{backgroundColor:"#000000"}} variant='dark'>
+    <Navbar expand="lg" style={{backgroundColor:"transparent"}} variant='dark' className="navbar-fantasy">
         <Container fluid>
-            <Navbar.Brand className='cursor' onClick={() => { navigate('/') }}><img src="https://cdn.mos.cms.futurecdn.net/qPibdLSyYHnTX5NymkEb8M.jpeg" width={120} height={65}/>  </Navbar.Brand>
+            <Navbar.Brand className='cursor' onClick={() => { navigate('/') }}>
+                <img src="https://cdn.mos.cms.futurecdn.net/qPibdLSyYHnTX5NymkEb8M.jpeg" width={120} height={65} alt="Logo"/>  
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto" style={{gap: "60px"}}>
@@ -30,15 +32,15 @@ const NavBar = () => {
                     <Nav.Link onClick={() => { navigate('/relations') }} className="nav-link-custom">Relazioni</Nav.Link>
                     <Nav.Link onClick={() => { navigate('/quiz') }} className="nav-link-custom">Quiz</Nav.Link>
                 </Nav>
-                <Form className='d-flex' onSubmit={handleSubmit}>
+                <Form className='d-flex' onSubmit={handleSubmit} style={{gap: "10px"}}>
                     <Form.Control
                         type='search'
-                        placeholder='Search'
+                        placeholder='Search champions...'
                         className='me-2'
                         value={search}
                         onChange={(e) => { setSearch(e.target.value) }}
                     />
-                    <Button type='submit'>Cerca</Button>
+                    <Button type='submit' className="btn-fantasy">Cerca</Button>
                 </Form>
             </Navbar.Collapse>
         </Container>

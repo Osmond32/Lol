@@ -1,21 +1,21 @@
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const RegionCard = ({ region }) => {
     const navigate = useNavigate();
 
     return <>
-        <Card className="region-card col-3" style={{ cursor: "pointer" }} onClick={() => navigate("/region/" + region.id)}>
+        <Card className="region-card cursor" style={{ width: "calc(25% - 15px)" }} onClick={() => navigate("/region/" + region.id)}>
             <Card.Img
                 variant="top"
                 src={region.image}
                 alt={region.name}
-                style={{ height: "200px", objectFit: "cover" }}
+                style={{ height: "250px", objectFit: "cover" }}
             />
             <Card.Body>
-                <Card.Title className="text-truncate">{region.name}</Card.Title>
-               
-                
+                <Card.Title style={{fontFamily: "'Cinzel', serif", textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700'}}>
+                    {region.name}
+                </Card.Title>
             </Card.Body>
         </Card>
     </>;

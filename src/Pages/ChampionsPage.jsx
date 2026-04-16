@@ -7,7 +7,7 @@ import ChampionCard from "../Components/ChampionCard";
 const ChampionsPage = () => {
     const [champions, setChampions] = useState([]);
     const [filteredChampions, setFilteredChampions] = useState([]);
-    const [selectedRole, setSelectedRole] = useState("all");
+    const [selectedRole, setSelectedRole] = useState("all"); 
 
     const fetchChampions = async () => {
         try {
@@ -42,8 +42,8 @@ const ChampionsPage = () => {
     }, [])
 
     return <>
-        <Container fluid className="champions-page-container d-flex flex-column align-items-center pt-3 gap-3">
-            <h1>Champions di League of Legends</h1>
+        <Container fluid className="champions-page-container d-flex flex-column align-items-center pt-5 pb-5">
+            <h1 className="section-title">Campioni di Runeterra</h1>
             
             <Form.Select 
                 className="role-select" 
@@ -59,9 +59,11 @@ const ChampionsPage = () => {
                 <option value="Marksman">Marksman</option>
             </Form.Select>
 
-            <p>Mostrando {filteredChampions.length} champions</p>
+            <span className="counter-badge">
+                {filteredChampions.length} Campioni
+            </span>
 
-            <div className="d-flex flex-wrap gap-3 justify-content-center">
+            <div className="d-flex flex-wrap gap-3 justify-content-center" style={{width: "100%", maxWidth: "1400px", margin: "0 auto"}}>
                 {filteredChampions.map((champion) => {
                     return <ChampionCard champion={champion} key={champion.id} />
                 })}

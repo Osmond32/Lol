@@ -1,44 +1,80 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const QuestionCard = ({ question, selectedAnswer, onSelectAnswer, isAnswered }) => {
     
-    const getButtonVariant = (option) => {
+    const getButtonStyle = (option) => {
+        const baseStyle = {
+            background: "linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(212,175,55,0) 100%)",
+            border: "2px solid #d4af37",
+            color: "#f5f5f5",
+            padding: "15px 20px",
+            borderRadius: "4px",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            fontWeight: "500",
+            fontSize: "15px",
+            textAlign: "left",
+            fontFamily: "Lora, serif",
+            width: "100%"
+        };
+
         if (!isAnswered) {
-            return selectedAnswer === option ? "primary" : "outline-primary";
+            if (selectedAnswer === option) {
+                return {
+                    ...baseStyle,
+                    background: "#d4af37",
+                    color: "#0a0e27",
+                    fontWeight: "700",
+                    transform: "translateX(5px)"
+                };
+            }
+            return baseStyle;
         }
         
         if (option === question.correctAnswer) {
-            return "success";
+            return {
+                ...baseStyle,
+                background: "#28a745",
+                borderColor: "#20c997",
+                color: "#fff",
+                fontWeight: "700"
+            };
         }
         
         if (selectedAnswer === option && option !== question.correctAnswer) {
-            return "danger";
+            return {
+                ...baseStyle,
+                background: "#dc3545",
+                borderColor: "#c82333",
+                color: "#fff",
+                fontWeight: "700"
+            };
         }
         
-        return "outline-secondary";
+        return {
+            ...baseStyle,
+            opacity: 0.6
+        };
     }
 
     return <>
-        <Card className="col-8">
-            <Card.Body>
-                <Card.Title>
-                    <h3>{question.question}</h3>
-                </Card.Title>
-                <div className="d-flex flex-column gap-2 mt-4">
-                    {question.options.map((option, index) => {
-                        return <Button
-                            key={index}
-                            variant={getButtonVariant(option)}
-                            onClick={() => onSelectAnswer(option)}
-                            disabled={isAnswered}
-                            className="text-start"
-                        >
-                            {option}
-                        </Button>
-                    })}
-                </div>
-            </Card.Body>
-        </Card>
+        <div className="question-card">
+            <div className="question-text">
+                {question.question}
+            </div>
+            <div style={{display: "flex", flexDirection: "column", gap: "12px", marginTop: "20px"}}>
+                {question.options.map((option, index) => {
+                    return <button
+                        key={index}
+                        onClick={() => onSelectAnswer(option)}
+                        disabled={isAnswered}
+                        style={getButtonStyle(option)}
+                    >
+                        {option}
+                    </button>
+                })}
+            </div>
+        </div>
     </>;
 }
 

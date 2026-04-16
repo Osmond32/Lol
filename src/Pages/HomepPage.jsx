@@ -10,25 +10,35 @@ const HomePage = () => {
         <div className="homepage-container">
             <div className="homepage-overlay">
                 <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-                    <h1 className="home-title" style={{color:"#FFFFFF"}}>Benvenuto nell'Universo di League of Legends</h1>
-                    <p className="home-subtitle" style={{color:"#FFFFFF"}}>
-                        Esplora il mondo di Runeterra, scopri i suoi eroi leggendari e immergiti
-                        nelle loro storie epiche. Ogni champion ha una storia unica da raccontare.
+                    <h1 className="homepage-title">L'Universo di Runeterra Ti Attende</h1>
+                    <p className="homepage-subtitle">
+                        Immergiti nel mondo affascinante di League of Legends. Scopri i campioni leggendari,<br />
+                        esplora le mitiche regioni di Runeterra e vivi le loro straordinarie storie.
                     </p>
-                    <div className="d-flex gap-3 mt-4">
+                    <div className="d-flex gap-4 mt-5">
                         <button
-                            className="btn btn-primary btn-lg"
+                            className="btn-fantasy"
                             onClick={() => { navigate('/champions') }}
-                        > Esplora Champions
+                            style={{padding: "15px 40px", fontSize: "18px", fontWeight: "700"}}
+                        >
+                            ⚔️ Esplora Champions
                         </button>
 
                         <button
-                            className="btn btn-primary btn-lg"
+                            className="btn-fantasy"
                             onClick={() => { navigate('/regions') }}
-                        > Scopri le Regioni
+                            style={{padding: "15px 40px", fontSize: "18px", fontWeight: "700"}}
+                        >
+                            🗺️ Scopri Regioni
                         </button>
 
-
+                        <button
+                            className="btn-fantasy"
+                            onClick={() => { navigate('/quiz') }}
+                            style={{padding: "15px 40px", fontSize: "18px", fontWeight: "700"}}
+                        >
+                            📚 Sfida il Quiz
+                        </button>
                     </div>
                 </Container>
             </div>
