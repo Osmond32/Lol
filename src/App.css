@@ -384,6 +384,28 @@
     inset 0 1px 0 rgba(212, 175, 55, 0.2);
 }
 
+.fantasy-card p {
+  color: var(--text-light) !important;
+  line-height: 1.6;
+}
+
+.fantasy-card h4,
+.fantasy-card h5 {
+  color: var(--gold-primary) !important;
+}
+
+.champion-info-section p {
+  color: var(--text-light) !important;
+}
+
+.card-body p {
+  color: var(--text-light) !important;
+}
+
+.card-body .card-text {
+  color: var(--text-light) !important;
+}
+
 /* ========== TABS ========== */
 .nav-tabs {
   border-bottom: 2px solid var(--gold-primary);
@@ -616,6 +638,20 @@
     inset 0 1px 0 rgba(212, 175, 55, 0.1);
   max-height: 550px;
   overflow-y: auto;
+  color: var(--text-light);
+}
+
+.champion-info-box h5,
+.champion-info-box h4 {
+  color: var(--gold-primary) !important;
+}
+
+.champion-info-box p {
+  color: var(--text-light) !important;
+}
+
+.champion-info-box span {
+  color: var(--text-light) !important;
 }
 
 .champion-info-box::-webkit-scrollbar {
@@ -657,8 +693,9 @@
   margin-bottom: 20px;
 }
 
-.info-label {
-  color: var(--gold-primary);
+.info-label,
+.info-label h5 {
+  color: var(--gold-primary) !important;
   font-weight: 700;
   font-family: 'Cinzel', serif;
   margin-bottom: 8px;
@@ -668,12 +705,20 @@
   text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
 }
 
+h5.info-label {
+  color: var(--gold-primary) !important;
+}
+
 .info-text {
-  color: var(--text-light);
+  color: var(--text-light) !important;
   line-height: 1.7;
   margin-bottom: 0;
   text-align: justify;
   font-size: 14px;
+}
+
+.champion-info-section span:not(.champion-tag) {
+  color: var(--text-light) !important;
 }
 
 .champion-tag {
