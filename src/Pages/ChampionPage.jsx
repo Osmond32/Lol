@@ -12,7 +12,7 @@ import RelationsTab from "../Components/RelationsTab";
 
 const ChampionPage = () => {
     const { id } = useParams();
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     const [champion, setChampion] = useState({});
     const [key, setKey] = useState("abilities")
 

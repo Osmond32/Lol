@@ -3,7 +3,7 @@ import ChampionCard from "../Components/ChampionCard";
 import { Container } from "react-bootstrap";
 
 import { useEffect, useState } from "react";
-import DataDragonService from "../services/DataDragonService";
+import DataDragonService from "../Services/DataDragonService";
 
 const SearchPage = () => {
     const location = useLocation();

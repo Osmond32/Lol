@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Form } from "react-bootstrap";
-import DataDragonService from "../services/DataDragonService";
+import DataDragonService from "../Services/DataDragonService";
 import ChampionCard from "../Components/ChampionCard";
 
 

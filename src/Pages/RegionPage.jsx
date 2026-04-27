@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-import DataDragonService from "../services/DataDragonService";
+import DataDragonService from "../Services/DataDragonService";
 import ChampionCard from "../Components/ChampionCard";
 import ChampionRegionMapping from "../Services/ChampionRegionMapping";
 import RegionData from "../Services/RegionData";
