@@ -6,7 +6,7 @@ import ImagesService from "../Services/ImagesService";
 import AbilitiesTab from "../Components/AbilitiesTab";
 import StatsTab from "../Components/StatsTab";
 import SkinsTab from "../Components/SkinsTab";
-import DataDragonService from "../services/DataDragonService";
+import DataDragonService from "../Services/DataDragonService";
 import RelationsTab from "../Components/RelationsTab";
 
 
