@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ChampionsPage from './pages/ChampionsPage';
+import ChampionsPage from './Pages/ChampionsPage';
 import NavBar from './Components/NavBar';
 import HomePage from './Pages/HomepPage';
 import ChampionPage from './Pages/ChampionPage';
