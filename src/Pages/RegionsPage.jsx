@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import RegionCard from "../Components/RegionCard";
 import RegionData from "../Services/RegionData";
@@ -18,11 +18,15 @@ const RegionsPage = () => {
             <h1 className="section-title">Regioni di Runeterra</h1>
             <p style={{color: '#f5f5f5', fontSize: '18px', marginBottom: '40px', maxWidth: '600px', textAlign: 'center', lineHeight: '1.6'}}>Esplora i misteriosi regni dell'universo di League of Legends</p>
             
-            <div className="d-flex flex-wrap gap-3 justify-content-center" style={{width: "100%", maxWidth: "1400px", margin: "0 auto"}}>
+            <Row className="g-4 justify-content-center" style={{width: "100%", maxWidth: "1400px", margin: "0 auto"}}>
                 {regions.map((region) => {
-                    return <RegionCard region={region} key={region.id} />
+                    return (
+                        <Col xs={12} sm={6} md={4} lg={3} key={region.id} className="d-flex justify-content-center">
+                            <RegionCard region={region} />
+                        </Col>
+                    );
                 })}
-            </div>
+            </Row>
         </Container>
     </>;
 }
