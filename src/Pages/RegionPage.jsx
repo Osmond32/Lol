@@ -52,7 +52,7 @@ const RegionPage = () => {
 
             <Container fluid className="d-flex flex-column align-items-center gap-3 pt-5 pb-5" style={{position: 'relative', zIndex: '1'}}>
                 
-                <Container className="col-8 fantasy-card" style={{marginBottom: '40px'}}>
+                <Container className="col-11 col-md-10 col-lg-8 fantasy-card" style={{marginBottom: '40px'}}>
                     <p style={{ textAlign: "justify", fontSize: "16px", color: '#f5f5f5', lineHeight: '1.8'}}>{region.description}</p>
                 </Container>
 

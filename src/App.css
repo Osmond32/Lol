@@ -1029,137 +1029,37 @@ h5.info-label {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-/* Select ruoli Champions Page - Centrato e ridotto */
-.role-select {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-}
-.regions-page-container{
-   background-color: #bfd6f1;
-  min-height: 100vh;
-}
-/* Champion Page - Background con immagine */
-.champion-page-background {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
-/* Overlay per rendere lo sfondo non aggressivo */
-.champion-page-overlay {
-  background-color: rgba(255, 255, 255, 0.35);
-  min-height: 100vh;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-/* Champion Page - Immagine profilo */
-.champion-profile-image {
-  flex: 0 0 400px;
-  max-width: 400px;
-}
-
-.champion-profile-image img {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Champion Page - Riquadro info a destra */
-.champion-info-box {
-  flex: 1;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  max-height: 500px;
- 
-}
-
-/* Nome champion */
-.champion-name {
-  color: #1976D2;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Titolo champion */
-.champion-title {
-  color: #616161;
-  font-style: italic;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #E0E0E0;
-}
-
-/* Sezioni info */
-.champion-info-section {
-  margin-bottom: 15px;
-}
-
-/* Label delle info */
-.info-label {
-  color: #424242;
-  font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Testo delle info */
-.info-text {
-  color: #212121;
-  line-height: 1.6;
-  margin-bottom: 0;
-  text-align: justify;
- 
-}
-
-/* Tag ruoli */
-.champion-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.champion-tabs-container{
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-.region-header-image{
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 991px) {
+  .champion-profile-image {
+    flex: 1 1 auto;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
-.region-header-overlay{
-  width: 100%;
-  height: 100%;
-  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)) ;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .champion-info-box {
+    max-height: none;
+  }
 }
-.region-header-title{
-  color: white;
-  font-size: 64px;
-  font-weight: bold;
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8) ;
-}
-.relation-page-background{
-   background-color: #bfd6f1;
-  min-height: 100vh;
+
+@media (max-width: 768px) {
+  .fantasy-card {
+    padding: 16px;
+  }
+  .section-title {
+    font-size: 28px;
+    margin: 30px 0 40px 0;
+  }
+  .region-header-title {
+    font-size: 40px;
+  }
+  .region-header-image {
+    height: 300px;
+  }
+  .champion-name {
+    font-size: 32px;
+  }
+  .nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 }

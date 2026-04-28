@@ -42,9 +42,9 @@ const ChampionPage = () => {
             }} >
 
             <div className="champion-page-overlay">
-                <Container fluid className="d-flex flex-column align-items-center gap-3 col-10">
+                <Container fluid className="d-flex flex-column align-items-center gap-3 col-12 col-lg-10 px-3">
 
-                    <Container className="d-flex gap-4 mb-5">
+                    <Container className="d-flex flex-column flex-lg-row gap-4 mb-5">
 
                         <div className="champion-profile-image">
                             <img

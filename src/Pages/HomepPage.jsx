@@ -15,7 +15,7 @@ const HomePage = () => {
                         Immergiti nel mondo affascinante di League of Legends. Scopri i campioni leggendari,<br />
                         esplora le mitiche regioni di Runeterra e vivi le loro straordinarie storie.
                     </p>
-                    <div className="d-flex gap-4 mt-5">
+                    <div className="d-flex flex-column flex-md-row gap-4 mt-5 align-items-center">
                         <button
                             className="btn-fantasy"
                             onClick={() => { navigate('/champions') }}

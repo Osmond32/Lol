@@ -16,14 +16,14 @@ const RelationsPage = () => {
     return <>
         <Container fluid className="relation-page-background d-flex flex-column align-items-center pt-3 gap-3">
             <h1>Relazioni tra Champions</h1>
-            <p style={{fontSize : "20px"}}>Esplora le alleanze e le rivalità dell'universo di League of Legends</p>
+            <p style={{fontSize : "20px", textAlign: "center", color: "#f5f5f5", padding: "0 15px"}}>Esplora le alleanze e le rivalità dell'universo di League of Legends</p>
 
-            <div className="d-flex flex-column gap-5 col-10">
+            <div className="d-flex flex-column gap-5 col-12 col-lg-10 px-3">
                 {Object.keys(allRelations).map((championId) => {
                     const relations = allRelations[championId];
-                    return <Card key={championId}>
+                    return <Card key={championId} className="fantasy-card">
                         <Card.Body>
-                            <div className="d-flex align-items-center gap-3 mb-3">
+                            <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
                                 <img 
                                     src={ImagesService.getChampionImageUrl(championId)}
                                     alt={championId}
@@ -41,7 +41,7 @@ const RelationsPage = () => {
                                 </div>
                             </div>
 
-                            <div className="d-flex gap-5">
+                            <div className="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start">
                                 {relations.allies.length > 0 && (
                                     <div>
                                         <h5 className="text-success">Alleati:</h5>
