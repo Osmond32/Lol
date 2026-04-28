@@ -5,7 +5,7 @@ const RegionCard = ({ region }) => {
     const navigate = useNavigate();
 
     return <>
-        <Card className="region-card cursor" style={{ width: "calc(25% - 15px)" }} onClick={() => navigate("/region/" + region.id)}>
+        <Card className="region-card cursor w-100 h-100" onClick={() => navigate("/region/" + region.id)}>
             <Card.Img
                 variant="top"
                 src={region.image}
